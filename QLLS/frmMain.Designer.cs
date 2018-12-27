@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
@@ -49,6 +54,9 @@
             this.btnLuu = new E00_Control.his_ButtonX2();
             this.superTabCauHinh = new DevComponents.DotNetBar.SuperTabItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnGet = new E00_Control.his_ButtonX2();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvM3u8 = new E00_Control.his_DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.stcMain)).BeginInit();
             this.stcMain.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvM3u8)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -220,9 +230,11 @@
             // 
             // superTabControlPanel2
             // 
+            this.superTabControlPanel2.Controls.Add(this.panel3);
             this.superTabControlPanel2.Controls.Add(this.his_TextboxX2);
             this.superTabControlPanel2.Controls.Add(this.txtChonFile);
             this.superTabControlPanel2.Controls.Add(this.btnChonFile);
+            this.superTabControlPanel2.Controls.Add(this.btnGet);
             this.superTabControlPanel2.Controls.Add(this.btnLuu);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel2.Location = new System.Drawing.Point(0, 26);
@@ -240,7 +252,7 @@
             this.his_TextboxX2.Border.Class = "TextBoxBorder";
             this.his_TextboxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.his_TextboxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.his_TextboxX2.Location = new System.Drawing.Point(23, 61);
+            this.his_TextboxX2.Location = new System.Drawing.Point(762, 72);
             this.his_TextboxX2.Name = "his_TextboxX2";
             this.his_TextboxX2.Size = new System.Drawing.Size(146, 26);
             this.his_TextboxX2.TabIndex = 1;
@@ -254,7 +266,7 @@
             this.txtChonFile.Border.Class = "TextBoxBorder";
             this.txtChonFile.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtChonFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtChonFile.Location = new System.Drawing.Point(23, 17);
+            this.txtChonFile.Location = new System.Drawing.Point(762, 28);
             this.txtChonFile.Name = "txtChonFile";
             this.txtChonFile.Size = new System.Drawing.Size(146, 26);
             this.txtChonFile.TabIndex = 1;
@@ -264,7 +276,7 @@
             // 
             this.btnChonFile.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnChonFile.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnChonFile.Location = new System.Drawing.Point(192, 20);
+            this.btnChonFile.Location = new System.Drawing.Point(931, 31);
             this.btnChonFile.Name = "btnChonFile";
             this.btnChonFile.Size = new System.Drawing.Size(75, 23);
             this.btnChonFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -276,7 +288,7 @@
             // 
             this.btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLuu.Location = new System.Drawing.Point(267, 294);
+            this.btnLuu.Location = new System.Drawing.Point(762, 140);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -294,6 +306,70 @@
             // buttonItem1
             // 
             this.buttonItem1.Name = "buttonItem1";
+            // 
+            // btnGet
+            // 
+            this.btnGet.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnGet.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnGet.Location = new System.Drawing.Point(762, 194);
+            this.btnGet.Name = "btnGet";
+            this.btnGet.Size = new System.Drawing.Size(75, 23);
+            this.btnGet.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnGet.TabIndex = 0;
+            this.btnGet.Text = "Run";
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dgvM3u8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(729, 487);
+            this.panel3.TabIndex = 2;
+            // 
+            // dgvM3u8
+            // 
+            this.dgvM3u8.AllowUserToAddRows = false;
+            this.dgvM3u8.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
+            this.dgvM3u8.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvM3u8.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvM3u8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvM3u8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvM3u8.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvM3u8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvM3u8.GridColor = System.Drawing.Color.Thistle;
+            this.dgvM3u8.Location = new System.Drawing.Point(0, 0);
+            this.dgvM3u8.MultiSelect = false;
+            this.dgvM3u8.Name = "dgvM3u8";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvM3u8.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dgvM3u8.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvM3u8.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvM3u8.Size = new System.Drawing.Size(729, 487);
+            this.dgvM3u8.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -314,6 +390,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.stcMain)).EndInit();
             this.stcMain.ResumeLayout(false);
             this.superTabControlPanel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvM3u8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +418,8 @@
         private E00_Control.his_TextboxX txtChonFile;
         private E00_Control.his_TextboxX his_TextboxX2;
         private E00_Control.his_ButtonX2 btnChonFile;
+        private E00_Control.his_ButtonX2 btnGet;
+        private System.Windows.Forms.Panel panel3;
+        private E00_Control.his_DataGridView dgvM3u8;
     }
 }

@@ -33,6 +33,7 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtMatKhau = new E00_Control.his_TextboxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // txtTaiKhoan
@@ -58,6 +59,7 @@
             this.btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // labelX1
             // 
@@ -97,11 +99,20 @@
             this.labelX2.TabIndex = 2;
             this.labelX2.Text = "Mật Khẩu:";
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(133, 189);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(338, 55);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 449);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.btnDangNhap);
@@ -121,6 +132,7 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private E00_Control.his_TextboxX txtMatKhau;
         private DevComponents.DotNetBar.LabelX labelX2;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

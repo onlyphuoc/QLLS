@@ -60,5 +60,10 @@ namespace QLLS
                 DangNhap();
             }
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
